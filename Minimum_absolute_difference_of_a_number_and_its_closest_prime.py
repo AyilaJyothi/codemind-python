@@ -1,33 +1,28 @@
-def np(c):
-    s=0
-    if c!=1:
-        for i in range(2,c):
-            if(c%i==0):
-                s=1
-                break
-    if s==0:
-        return 1
-    else:
-        return 0
-a=1
-n=int(input())
-d=n+1
-e=n-1
-if n>1 and np(n)==1:
+def is_prime(i):
+    c=0
+    for ii in range(2,i):
+        if i%ii==0:
+            c+=1
+    if c==0:
+        return i
+
+
+x = int(input())
+f = x
+for i in range(x,2,-1):
+    if is_prime(i):
+        n = i
+        break
+while f!=0:
+    if is_prime(f):
+        m = f
+        break
+    f+=1
+n = x-n
+m = m-x
+if is_prime(x):
     print('0')
-elif n==0:
-    print("2")
-elif n==1:
-    print('1')
+elif n<m:
+    print(n)
 else:
-    while a:
-        if np(d)==1 and np(e)==1:
-            a=0
-        elif np(d)!=1:
-            d+=1
-        elif np(e)!=1:
-            e-=1
-    if d-n>=n-e:
-        print(n-e)
-    else:
-        print(d-n)
+    print(m)
