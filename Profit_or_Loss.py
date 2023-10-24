@@ -5,4 +5,4 @@ if(a<b):
 elif(a>b):
     print("Loss")
 else:
-    print("No profit and No loss")
+    print("No Profit and No Loss")
